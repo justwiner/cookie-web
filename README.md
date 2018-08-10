@@ -8,7 +8,6 @@ Make cookies simpler.
 ```sh
 npm install cookie-web
 ```
-*or*
 
 ```sh
 yarn add cookie-web
@@ -19,10 +18,16 @@ yarn add cookie-web
 ```js
 const {setCookie, getCookie, deleteCookie} = require('cookie-web')
 ```
-*or*
 
 ```js
 import {setCookie, getCookie, deleteCookie} from 'cookie-web'
+```
+```js
+const cookie = require('cookie-web')
+```
+
+```js
+import cookie from 'cookie-web'
 ```
 
 ### void setCookie (key, val, options = {})
@@ -70,8 +75,16 @@ getCookie('myOtherCookie') // undefined
 getCookie() // { myCookie_1: 'hello', myCookie_2: 'my-cookie' }
 ```
 
-### void deleteCookie (key)
+### void deleteCookie (key, options)
 Delete a cookie by key name  
+Of course, when you set the path/domain property before you create it
+you should set options,it must be the same as you create it!
+```js
+options = {
+    path,
+    domain
+}
+```
 use it !  
 
 ```js
@@ -81,7 +94,22 @@ getCookie() // { myCookie_1: 'hello', myCookie_2: 'my-cookie' }
 deleteCookie('myCookie_1')
 getCookie('myCookie_1') // undefined
 deleteCookie()
-getCookie() // {}
+getCookie() // undefined
+```
+But when you set the **path/domain** property before you create it, when deleting, you must use the same **path** and **domain** to delete it correctly!
+```js
+setCookie('myCookie_1', 'hello', {
+    path: '/home',
+    domain: '.google.com'
+})
+cookie.deleteCookie('myCookie_1', {
+    path: '/home',
+    domain: '.google.com'
+}) // delete 'myCookie_1'
+cookie.deleteCookie(undefined, {
+    path: '/home',
+    domain: '.google.com'
+}) // delete all
 ```
 
 - - -
