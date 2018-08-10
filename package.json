@@ -1,0 +1,22 @@
+{
+  "name": "my-cookie",
+  "version": "1.0.0",
+  "description": "Encapsulated cookie module,make cookies simpler.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justwiner/my-cookie.git"
+  },
+  "keywords": [
+    "cookie"
+  ],
+  "author": "winer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justwiner/my-cookie/issues"
+  },
+  "homepage": "https://github.com/justwiner/my-cookie#readme"
+}
