@@ -1,6 +1,6 @@
 {
   "name": "cookie-web",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Encapsulated cookie module,make cookies simpler.",
   "main": "index.js",
   "scripts": {
