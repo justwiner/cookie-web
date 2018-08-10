@@ -1,6 +1,7 @@
 # cookie-web
 
 [![NPM Version][npm-image]][npm-url]
+[![NPM Version][download-image]][npm-url]
 
 Make cookies simpler.
 ## Install
@@ -118,3 +119,4 @@ cookie.deleteCookie(undefined, {
 
 [npm-image]: https://img.shields.io/npm/v/cookie-web.svg?style=flat
 [npm-url]: https://www.npmjs.com/package/cookie-web
+[download-image]: https://img.shields.io/myget/mongodb/dt/cookie-web.svg
