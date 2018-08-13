@@ -1,6 +1,14 @@
 if (!Object.is(typeof window, 'undefined') && global === window) {
-    const {setCookie, getCookie, deleteCookie} = require('./lib/cookie')
-    const {setCookies, getCookies, deleteCookies} = require('./lib/cookieJson')
+    const {
+        setCookie,
+        getCookie,
+        deleteCookie
+    } = require('./lib/cookie')
+    const {
+        setCookies,
+        getCookies,
+        deleteCookies
+    } = require('./lib/cookieJson')
 
     const cookie = {
         setOne: setCookie,
